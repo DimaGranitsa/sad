@@ -34,7 +34,6 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="/foto/icon/icons8_detective_50px.png" Height="50" />
                 <Image Grid.Column="1" Source="/foto/icon/icons8_detective_64px.png" Height="50" />
                 <Image Grid.Column="2" Source="/foto/icon/icons8_shopping_cart_26px.png" Height="50" />
                 <Image MouseDown="kill_MouseDown" x:Name="kill" Grid.Column="3" Source="f:\sicharp\harley\harley\gl\icon\shutdown_mo.png" Height="50" />

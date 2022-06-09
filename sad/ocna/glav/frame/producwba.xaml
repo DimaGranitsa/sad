@@ -13,6 +13,7 @@
             <RowDefinition Height="80"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+       
         <Label Grid.Row="0"  Foreground="Black" FontSize="60" HorizontalAlignment="Center" Grid.Column="1" Content="Продукция" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -40,20 +41,20 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Image Source="/foto/вуц/Снимок экрана 2022-06-09 170249.jpg" Grid.RowSpan="5" Height="500" Opacity="0.3" />
+                    <Image Source="/foto/вуц/Снимок экрана 2022-06-09 170249.jpg" Grid.RowSpan="5" Height="500" Opacity="0.3" IsEnabled="False" />
                     <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="архитектурные" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
 
-                    <Button Grid.Row="1" Content="Скамейки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button x:Name="skam" Click="skam_Click"  Grid.Row="1" Content="Скамейки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+                    <Button x:Name="urn" Click="urn_Click" Grid.Row="2" Content="Урны" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="2" Content="Урны" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button x:Name="cvet" Click="cvet_Click" Grid.Row="3" Content="Цветники" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="3" Content="Цветники" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button x:Name="vel" Click="vel_Click" Grid.Row="4" Content="Велопарковки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="4" Content="Велопарковки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button x:Name="sanuz" Click="sanuz_Click" Grid.Row="5" Content="Санузлы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="5" Content="Санузлы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
-                VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="6" Foreground="White" Content="Площадки для выгула  собак" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button x:Name="dog"  Click="dog_Click" Grid.Row="6" Foreground="White" Content="Площадки для выгула  собак" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Grid>
@@ -79,7 +80,7 @@
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="Освещение" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
 
-                    <Image Source="/foto/вуц/lamp.png" Grid.RowSpan="4" Grid.Row="1"  Opacity="0.4" />
+                    <Image Source="/foto/вуц/lamp.png" Grid.RowSpan="4" Grid.Row="1"  Opacity="0.4" IsEnabled="False"/>
 
                     <Button Grid.Row="3" Content="Опоры освещения" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -116,7 +117,7 @@
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="Биосфера" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
 
-                    <Image Source="/foto/вуц/hvoy.png" Grid.RowSpan="4" Opacity="0.4" />
+                    <Image Source="/foto/вуц/hvoy.png" Grid.RowSpan="4" Opacity="0.4" IsEnabled="False" />
                     <Button Grid.Row="3" Content="Многолетние цветы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Button Grid.Row="4" Content="Хвойные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
@@ -126,5 +127,7 @@
                 </Grid>
             </Grid>
         </Grid>
+        <Frame x:Name="f1" Grid.RowSpan="2" Navigated="f1_Navigated_2"></Frame>
+
     </Grid>
 </Page>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sad.bd;
 
 namespace sad.ocna.glav.frame
 {
@@ -23,14 +24,20 @@ namespace sad.ocna.glav.frame
         public proect()
         {
             InitializeComponent();
+            pan.ItemsSource = bd.conneckt.sadEntities.progekt.ToList();
         }
 
         private void podrazdel1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //podrazdel1.Text =.SelectedItem.ToString();
         }
 
         private void podrazdel2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void pan_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

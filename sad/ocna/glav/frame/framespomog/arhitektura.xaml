@@ -8,21 +8,23 @@
       d:DesignHeight="800" d:DesignWidth="1300"
       Title="arhitektura">
 
-    <Grid>
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="0,0,0,10" VerticalAlignment="Top" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Orientation="Horizontal">
             <TextBox x:Name="serach_tb" TextChanged="serach_tb_TextChanged" Width="200" Height="29" HorizontalAlignment="Left" VerticalAlignment="Top" />
             <Button  Margin="0" Background="#2E333A" BorderBrush="#2E333A"  FontSize="18" Width="29"  Height="29" IsEnabled="False">
                 <Image Source="f:\sicharp\harley\harley\gl\icon\icons8_apple_magnifier_100px.png" />
             </Button>
-            <Button HorizontalAlignment="Right" Margin="0" Background="#2E333A" BorderBrush="#2E333A" FontSize="18" Width="29"  Height="29" x:Name="add_students" Click="add_students_Click_1">
+            <Button HorizontalAlignment="Right" Margin="0" Background="#2E333A" BorderBrush="#2E333A" FontSize="18" Width="29"  Height="29" x:Name="az" Click="az_Click">
                 <Image Source="f:\sicharp\harley\harley\gl\icon\icons8_alphabetical_sorting_32px.png"/>
             </Button>
-            
         </StackPanel>
+        <Grid Grid.Row="0">
+            <Label Content="{Binding Name}" Foreground="White" FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Page>

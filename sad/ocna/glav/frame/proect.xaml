@@ -22,10 +22,11 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Foreground="Black" FontSize="30" HorizontalAlignment="Center"  Content="Местность" FontFamily="Times New Roman" Height="40" VerticalAlignment="Top"></Label>
             <ComboBox VerticalAlignment="Bottom" Background="White" Width="500" Height="30" x:Name="podrazdel1" Grid.Row="1" SelectionChanged="podrazdel1_SelectionChanged">
-                <ComboBoxItem Content="Парки"/>
+                <!--<ComboBoxItem Content="Парки"/>
                 <ComboBoxItem Content="двор"/>
                 <ComboBoxItem Content="Велоинфраструктура"/>
-                <ComboBoxItem Content="набережные"/>
+                <ComboBoxItem Content="набережные"/>-->
+                <ComboBoxItem Content="{Binding tipproe}" FontSize="40" Foreground="Black"/>
             </ComboBox>
             <Label Grid.Column="1" Foreground="Black" FontSize="30" HorizontalAlignment="Center"  Content="Подразделение" FontFamily="Times New Roman" Height="40" VerticalAlignment="Top"></Label>
             <ComboBox VerticalAlignment="Bottom" Width="500" Height="30" x:Name="podrazdel2" Grid.Row="1" Grid.Column="1" SelectionChanged="podrazdel2_SelectionChanged">
@@ -35,6 +36,24 @@
                 <ComboBoxItem Content="Смарт-продукция"/>
             </ComboBox>
         </Grid>
-      
+        <ListView  Grid.Row="2" x:Name="pan"    SelectionChanged="pan_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2"  Rows="5" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding image}" Width="400" Height="230" />
+                        <Label Content="{Binding op }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                        <Label Content="{Binding gorod }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                        <Label Content="{Binding god }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                        <Label Content="{Binding tipproe }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                        <Label Content="{Binding tipprodukct }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

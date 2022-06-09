@@ -24,5 +24,43 @@ namespace sad.ocna.glav.frame
         {
             InitializeComponent();
         }
+
+        private void skam_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+            //f1.ItemsSource = null;
+        }
+
+        private void urn_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+        }
+
+        private void cvet_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+        }
+
+        private void vel_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+        }
+
+        private void sanuz_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+        }
+
+        private void dog_Click(object sender, RoutedEventArgs e)
+        {
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
+        }
+
+       
+
+        private void f1_Navigated_2(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
