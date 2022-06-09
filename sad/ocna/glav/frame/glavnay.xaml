@@ -1,0 +1,19 @@
+﻿<Page x:Class="sad.ocna.glav.frame.glavnay"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="glavnay">
+
+    <Grid>
+     <Image Source="/foto/icon/glav1.jpg" x:Name="q" />
+<Image Source="/foto/icon/Снимок экрана 2022-06-09 132546.jpg" x:Name="w" />
+
+        <Button Height="50" Width="50" HorizontalAlignment="Right" Name="per" Click="per_Click">
+            
+        </Button>
+    </Grid>
+</Page>

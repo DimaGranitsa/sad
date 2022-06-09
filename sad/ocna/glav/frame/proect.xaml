@@ -1,0 +1,40 @@
+﻿<Page x:Class="sad.ocna.glav.frame.proect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="proect">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Left" Grid.Column="1" Content="Проекты" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Foreground="Black" FontSize="30" HorizontalAlignment="Center"  Content="Местность" FontFamily="Times New Roman" Height="40" VerticalAlignment="Top"></Label>
+            <ComboBox VerticalAlignment="Bottom" Background="White" Width="500" Height="30" x:Name="podrazdel1" Grid.Row="1" SelectionChanged="podrazdel1_SelectionChanged">
+                <ComboBoxItem Content="Парки"/>
+                <ComboBoxItem Content="двор"/>
+                <ComboBoxItem Content="Велоинфраструктура"/>
+                <ComboBoxItem Content="набережные"/>
+            </ComboBox>
+            <Label Grid.Column="1" Foreground="Black" FontSize="30" HorizontalAlignment="Center"  Content="Подразделение" FontFamily="Times New Roman" Height="40" VerticalAlignment="Top"></Label>
+            <ComboBox VerticalAlignment="Bottom" Width="500" Height="30" x:Name="podrazdel2" Grid.Row="1" Grid.Column="1" SelectionChanged="podrazdel2_SelectionChanged">
+                <ComboBoxItem Content="Детские площадки"/>
+                <ComboBoxItem Content="Освещение"/>
+                <ComboBoxItem Content="Арт-объекты"/>
+                <ComboBoxItem Content="Смарт-продукция"/>
+            </ComboBox>
+        </Grid>
+      
+    </Grid>
+</Page>

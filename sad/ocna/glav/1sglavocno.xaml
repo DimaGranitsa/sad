@@ -1,0 +1,69 @@
+﻿<Page x:Class="sad.ocna.glav._1sglavocno"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="White"
+      Title="_1sglavocno">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Line Grid.Row="2" Stroke="Black" StrokeThickness="4" X1="0" Y1="1" X2="1920" Y2="0"></Line>
+        <!--название-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Foreground="Black" FontSize="60" HorizontalAlignment="Center" Grid.Column="1" Content="N-A-T-U-R-A-L" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+            <Image Height="70" Width="70" HorizontalAlignment="Left" Source="/foto/icon/icons8_telephone_50px.png" />
+            <Label Foreground="Black" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Content="+7(986)(925)-02-71" FontFamily="Times New Roman"></Label>
+            <!--кнопки поиска и корзины-->
+            <Grid Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="/foto/icon/icons8_detective_50px.png" Height="50" />
+                <Image Grid.Column="1" Source="/foto/icon/icons8_detective_64px.png" Height="50" />
+                <Image Grid.Column="2" Source="/foto/icon/icons8_shopping_cart_26px.png" Height="50" />
+                <Image MouseDown="kill_MouseDown" x:Name="kill" Grid.Column="3" Source="f:\sicharp\harley\harley\gl\icon\shutdown_mo.png" Height="50" />
+
+
+            </Grid>
+        </Grid>
+
+
+        <!--кнопки перехода-->
+        <Grid Grid.Row="1">
+            <!--<Label Foreground="Black" FontSize="50" HorizontalAlignment="Center" Grid.Column="1" Content="N-A-T-U-R-A-L" FontFamily="Times New Roman"></Label>-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Background="White" BorderBrush="White" Content="Главная" FontFamily="Times New Roman" Foreground="Black" FontSize="40" Click="Button_Click">
+
+            </Button>
+            <Button x:Name="progect" Click="progect_Click" Grid.Column="1" Background="White" BorderBrush="White" Content="Проекты" FontFamily="Times New Roman" Foreground="Black" FontSize="40">
+
+            </Button>
+            <Button x:Name="product" Click="product_Click" Grid.Column="2" Background="White" BorderBrush="White" Content="Продукция" FontFamily="Times New Roman" Foreground="Black" FontSize="40">
+
+            </Button>
+        </Grid>
+        <Frame x:Name="f1" Grid.Row="2" Navigated="f1_Navigated"></Frame>
+
+    </Grid>
+
+</Page>

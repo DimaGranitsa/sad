@@ -1,0 +1,130 @@
+﻿<Page x:Class="sad.ocna.glav.frame.producwba"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="producwba">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"  Foreground="Black" FontSize="60" HorizontalAlignment="Center" Grid.Column="1" Content="Продукция" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!--продукция1-->
+            <Grid Grid.Column="0">
+                <Frame>
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF63ABFD"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/foto/вуц/Снимок экрана 2022-06-09 170249.jpg" Grid.RowSpan="5" Height="500" Opacity="0.3" />
+                    <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="архитектурные" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+
+                    <Button Grid.Row="1" Content="Скамейки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="2" Content="Урны" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="3" Content="Цветники" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="4" Content="Велопарковки" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="5" Content="Санузлы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="6" Foreground="White" Content="Площадки для выгула  собак" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            <!--продукция2-->
+            <Grid Grid.Column="1">
+                <Frame>
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF21E8CB"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="Освещение" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+
+                    <Image Source="/foto/вуц/lamp.png" Grid.RowSpan="4" Grid.Row="1"  Opacity="0.4" />
+
+                    <Button Grid.Row="3" Content="Опоры освещения" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="4" Content="Архитектурная подсветка" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="5" Content="Прожекторы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="6" Foreground="White" Content="Подсветка деревьев" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            <!--продукция3-->
+            <Grid Grid.Column="2" >
+               
+
+                <Frame>
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF11F627"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="Биосфера" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
+
+                    <Image Source="/foto/вуц/hvoy.png" Grid.RowSpan="4" Opacity="0.4" />
+                    <Button Grid.Row="3" Content="Многолетние цветы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="4" Content="Хвойные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Grid.Row="5" Content="Декоративно-лиственные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
