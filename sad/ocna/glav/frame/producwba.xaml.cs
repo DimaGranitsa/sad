@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sad.bd;
 
 namespace sad.ocna.glav.frame
 {
@@ -23,16 +24,22 @@ namespace sad.ocna.glav.frame
         public producwba()
         {
             InitializeComponent();
+        
         }
 
         private void skam_Click(object sender, RoutedEventArgs e)
         {
-            f1.Navigate(new glav.frame.framespomog.arhitektura());
+           
             //f1.ItemsSource = null;
+            var a = bd.conneckt.sadEntities.productnotrost.Where(z => z.tipProduct == 1).FirstOrDefault();
+            ActualData.tipProduct = a.Id;
+            f1.Navigate(new glav.frame.framespomog.arhitektura());
         }
 
         private void urn_Click(object sender, RoutedEventArgs e)
         {
+            var a = bd.conneckt.sadEntities.productnotrost.Where(z => z.tipProduct == 2).FirstOrDefault();
+            ActualData.tipProduct = a.tipProduct.Value;
             f1.Navigate(new glav.frame.framespomog.arhitektura());
         }
 

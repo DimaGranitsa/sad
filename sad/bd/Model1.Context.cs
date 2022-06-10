@@ -26,5 +26,6 @@ namespace sad.bd
         }
     
         public virtual DbSet<progekt> progekt { get; set; }
+        public virtual DbSet<productnotrost> productnotrost { get; set; }
     }
 }

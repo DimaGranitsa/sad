@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using sad.bd;
 namespace sad.ocna.glav.frame.framespomog
 {
     /// <summary>
@@ -23,16 +23,23 @@ namespace sad.ocna.glav.frame.framespomog
         public arhitektura()
         {
             InitializeComponent();
+            pan.ItemsSource = null;
+            pan.ItemsSource = bd.conneckt.sadEntities.productnotrost.Where(z => z.tipProduct == ActualData.tipProduct).ToList();
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //std.ItemsSource = bd.connect.harleyEntities.otzov3.ToList().Where(z => z.name.Contains(serach_tb.Text)); //поиск по имени
+            pan.ItemsSource = bd.conneckt.sadEntities.productnotrost.ToList().Where(z => z.name.Contains(serach_tb.Text)); //поиск по имени
         }
 
         private void az_Click(object sender, RoutedEventArgs e)
         {
-            //std.ItemsSource = bd.connect.harleyEntities.otzov3.ToList().OrderBy(z => z.name); /*сортеровка по имени*/
+            pan.ItemsSource = bd.conneckt.sadEntities.productnotrost.ToList().OrderBy(z => z.name); /*сортеровка по имени*/
+        }
+
+        private void pan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

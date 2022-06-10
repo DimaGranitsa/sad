@@ -26,14 +26,24 @@
                 <ComboBoxItem Content="двор"/>
                 <ComboBoxItem Content="Велоинфраструктура"/>
                 <ComboBoxItem Content="набережные"/>-->
-                <ComboBoxItem Content="{Binding tipproe}" FontSize="40" Foreground="Black"/>
+                <!--<ComboBoxItem Content="{Binding tipproe}" FontSize="40" Foreground="Black"/>-->
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding tipproe}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
             </ComboBox>
             <Label Grid.Column="1" Foreground="Black" FontSize="30" HorizontalAlignment="Center"  Content="Подразделение" FontFamily="Times New Roman" Height="40" VerticalAlignment="Top"></Label>
             <ComboBox VerticalAlignment="Bottom" Width="500" Height="30" x:Name="podrazdel2" Grid.Row="1" Grid.Column="1" SelectionChanged="podrazdel2_SelectionChanged">
-                <ComboBoxItem Content="Детские площадки"/>
+                <!--<ComboBoxItem Content="Детские площадки"/>
                 <ComboBoxItem Content="Освещение"/>
                 <ComboBoxItem Content="Арт-объекты"/>
-                <ComboBoxItem Content="Смарт-продукция"/>
+                <ComboBoxItem Content="Смарт-продукция"/>-->
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding tipprodukct}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
             </ComboBox>
         </Grid>
         <ListView  Grid.Row="2" x:Name="pan"    SelectionChanged="pan_SelectionChanged">

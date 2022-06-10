@@ -24,7 +24,26 @@
             </Button>
         </StackPanel>
         <Grid Grid.Row="0">
-            <Label Content="{Binding Name}" Foreground="White" FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="{Binding name}" Foreground="White" FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <ListView x:Name="pan"    SelectionChanged="pan_SelectionChanged" >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2"  Rows="5" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Image Source="{Binding images}" Width="400" Height="230" />
+                            <Label Content="{Binding tipProductname }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                            <Label Content="{Binding name }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                            <Label Content="{Binding price }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
     </Grid>
 </Page>

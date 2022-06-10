@@ -94,7 +94,7 @@
             </Grid>
             <!--продукция3-->
             <Grid Grid.Column="2" >
-               
+
 
                 <Frame>
                     <Frame.Background>
@@ -103,7 +103,7 @@
                             <GradientStop Color="#FF11F627"/>
                         </LinearGradientBrush>
                     </Frame.Background>
-                    
+
                 </Frame>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -126,8 +126,11 @@
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Grid>
+
         </Grid>
-        <Frame x:Name="f1" Grid.RowSpan="2" Navigated="f1_Navigated_2"></Frame>
+        <Frame x:Name="f1" Grid.RowSpan="2" Navigated="f1_Navigated_2" Margin="-2,-8,2,8"></Frame>
+
+
 
     </Grid>
 </Page>
