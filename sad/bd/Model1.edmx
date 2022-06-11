@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Хранилище sadModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="hvoysvet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="tipprod" Type="int" />
+          <Property Name="tipproduname" Type="nvarchar" MaxLength="50" />
+          <Property Name="poliv" Type="nvarchar" MaxLength="50" />
+          <Property Name="cena" Type="nvarchar" MaxLength="50" />
+          <Property Name="vozrast" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="productnotrost">
           <Key>
             <PropertyRef Name="Id" />
@@ -29,9 +42,19 @@
           <Property Name="tipprodukct" Type="nvarchar" MaxLength="50" />
           <Property Name="tip" Type="int" />
         </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pass" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityContainer Name="Хранилище sadModelContainer">
+          <EntitySet Name="hvoysvet" EntityType="Self.hvoysvet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="productnotrost" EntityType="Self.productnotrost" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="progekt" EntityType="Self.progekt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -53,6 +76,8 @@
         <EntityContainer Name="sadEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="progekt" EntityType="Self.progekt" />
           <EntitySet Name="productnotrost" EntityType="sadModel.productnotrost" />
+          <EntitySet Name="hvoysvet" EntityType="sadModel.hvoysvet" />
+          <EntitySet Name="user" EntityType="sadModel.user" />
         </EntityContainer>
         <EntityType Name="productnotrost">
           <Key>
@@ -64,6 +89,27 @@
           <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="images" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="hvoysvet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tipprod" Type="Int32" />
+          <Property Name="tipproduname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poliv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cena" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vozrast" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -94,6 +140,29 @@
                 <ScalarProperty Name="tipProductname" ColumnName="tipProductname" />
                 <ScalarProperty Name="tipProduct" ColumnName="tipProduct" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hvoysvet">
+            <EntityTypeMapping TypeName="sadModel.hvoysvet">
+              <MappingFragment StoreEntitySet="hvoysvet">
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="vozrast" ColumnName="vozrast" />
+                <ScalarProperty Name="cena" ColumnName="cena" />
+                <ScalarProperty Name="poliv" ColumnName="poliv" />
+                <ScalarProperty Name="tipproduname" ColumnName="tipproduname" />
+                <ScalarProperty Name="tipprod" ColumnName="tipprod" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="sadModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="Login1" ColumnName="Login1" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

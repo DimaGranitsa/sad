@@ -82,18 +82,22 @@
 
                     <Image Source="/foto/вуц/lamp.png" Grid.RowSpan="4" Grid.Row="1"  Opacity="0.4" IsEnabled="False"/>
 
-                    <Button Grid.Row="3" Content="Опоры освещения" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="3" Content="Опоры освещения" Name="op" Click="op_Click" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="4" Content="Архитектурная подсветка" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="4" Content="Архитектурная подсветка" Name="ar" Click="ar_Click" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="5" Content="Прожекторы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="5" Name="pro" Click="pro_Click" Content="Прожекторы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="6" Foreground="White" Content="Подсветка деревьев" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="6" Name="drevo" Click="drevo_Click"  Foreground="White" Content="Подсветка деревьев" FontFamily="Times New Roman" FontSize="30" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
+
+
+
             </Grid>
             <!--продукция3-->
             <Grid Grid.Column="2" >
+
 
 
                 <Frame>
@@ -118,17 +122,18 @@
                     <Label Grid.Row="0"  Foreground="Black" FontSize="40" HorizontalAlignment="Center" Grid.Column="1" Content="Биосфера" FontFamily="Times New Roman" Height="80" VerticalAlignment="Top"></Label>
 
                     <Image Source="/foto/вуц/hvoy.png" Grid.RowSpan="4" Opacity="0.4" IsEnabled="False" />
-                    <Button Grid.Row="3" Content="Многолетние цветы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="3" Name="cvet1" Click="cvet1_Click" Content="Многолетние цветы" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="4" Content="Хвойные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="4" Name="hvoi" Click="hvoi_Click" Content="Хвойные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Grid.Row="5" Content="Декоративно-лиственные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
+                    <Button Grid.Row="5" Name="dex" Click="dex_Click" Content="Декоративно-лиственные" FontFamily="Times New Roman" FontSize="40" Background="Transparent" BorderBrush="Transparent" Width="400" Height="50"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Grid>
 
         </Grid>
-        <Frame x:Name="f1" Grid.RowSpan="2" Navigated="f1_Navigated_2" Margin="-2,-8,2,8"></Frame>
+        <Frame x:Name="f1" Grid.RowSpan="2" Navigated="f1_Navigated_2" ></Frame>
+
 
 
 

@@ -7,6 +7,8 @@
       <Diagram DiagramId="040049fe4c8b4cd2a0e368013fd57d05" Name="Diagram1">
         <EntityTypeShape EntityType="sadModel.progekt" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sadModel.productnotrost" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="sadModel.hvoysvet" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="sadModel.user" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -10,5 +10,6 @@ namespace sad.bd
     public class ActualData
     {
         public static int tipProduct { get; set; }
+        public static int Id_User { get; set; }
     }
 }

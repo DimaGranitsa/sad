@@ -1,0 +1,46 @@
+﻿<Page x:Class="sad.ocna.glav.frame.admin._2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame.admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="_2">
+
+    <Grid Background="#2E333A">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1">
+
+            <StackPanel Margin="0,0,0,10" VerticalAlignment="Top" Orientation="Horizontal">
+                <TextBox x:Name="serach_tb" TextChanged="serach_tb_TextChanged" Width="200" Height="29" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Button  Margin="0" Background="#2E333A" BorderBrush="#2E333A"  FontSize="18" Width="29"  Height="29" IsEnabled="False">
+                   <Image Source="/foto/nab/1/1.jpg" />
+
+                </Button>
+                <Button HorizontalAlignment="Right" Margin="0" Background="#2E333A" BorderBrush="#2E333A" FontSize="18" Width="29"  Height="29" x:Name="add_students" Click="add_students_Click">
+                   <Image Source="/foto/nab/1/2.jpg" />
+
+                </Button>
+                <Button Click="Button_Click"  Margin="0" Background="#2E333A" BorderBrush="#2E333A"  FontSize="18" Width="29"  Height="29" IsEnabled="False">
+                    <Image Source="/foto/nab/1/1.jpg" />
+
+                </Button>
+            </StackPanel>
+            <StackPanel>
+                <ListView   x:Name="std" SelectionChanged="std_SelectionChanged" Width="200" HorizontalAlignment="Left" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Логин"  DisplayMemberBinding ="{Binding Login1}"   Width="auto"/>
+                            <GridViewColumn Header="Пароль" DisplayMemberBinding ="{Binding Pass}"  Width="auto"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

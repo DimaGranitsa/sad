@@ -74,6 +74,9 @@
     </Compile>
     <Compile Include="bd\ActualData.cs" />
     <Compile Include="bd\conneckt.cs" />
+    <Compile Include="bd\hvoysvet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="bd\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +98,9 @@
     <Compile Include="bd\progekt.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="bd\user.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,7 +109,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ocna\glav\frame\admin\1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ocna\glav\frame\admin\2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ocna\glav\frame\admin\login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ocna\glav\frame\framespomog\arhitektura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ocna\glav\frame\framespomog\cvet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,13 +141,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ocna\glav\frame\reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ocna\glav\frame\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ocna\glav\1sglavocno.xaml.cs">
       <DependentUpon>1sglavocno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ocna\glav\frame\admin\1.xaml.cs">
+      <DependentUpon>1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\admin\2.xaml.cs">
+      <DependentUpon>2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\admin\login.xaml.cs">
+      <DependentUpon>login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ocna\glav\frame\framespomog\arhitektura.xaml.cs">
       <DependentUpon>arhitektura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\framespomog\cvet.xaml.cs">
+      <DependentUpon>cvet.xaml</DependentUpon>
     </Compile>
     <Compile Include="ocna\glav\frame\glavnay.xaml.cs">
       <DependentUpon>glavnay.xaml</DependentUpon>
@@ -135,6 +177,12 @@
     </Compile>
     <Compile Include="ocna\glav\frame\proect.xaml.cs">
       <DependentUpon>proect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\reg.xaml.cs">
+      <DependentUpon>reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -219,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="foto\park\3\" />
-    <Folder Include="foto\tovars\hoq\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="foto\park\1\1.jpg" />
@@ -241,6 +288,34 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="foto\tovars\hoq\ащкь\4.jpg" />
+    <Resource Include="foto\tovars\hoq\ащкь\5.jpg" />
+    <Resource Include="foto\tovars\hoq\ащкь\6.jpg" />
+    <Resource Include="foto\tovars\hoq\рмщн\1.jpg" />
+    <Resource Include="foto\tovars\hoq\рмщн\2.jpg" />
+    <Resource Include="foto\tovars\hoq\рмщн\3.jpg" />
+    <Resource Include="foto\tovars\hoq\cvet\1.jpg" />
+    <Resource Include="foto\tovars\hoq\cvet\2.jpg" />
+    <Resource Include="foto\tovars\hoq\cvet\3.jpg" />
+    <Resource Include="foto\tovars\dom\glip\10.jpg" />
+    <Resource Include="foto\tovars\dom\glip\11.jpg" />
+    <Resource Include="foto\tovars\dom\glip\6.jpg" />
+    <Resource Include="foto\tovars\dom\glip\7.jpg" />
+    <Resource Include="foto\tovars\dom\glip\8.jpg" />
+    <Resource Include="foto\tovars\dom\glip\9.jpg" />
+    <Resource Include="foto\tovars\dom\svet\4.jpg" />
+    <Resource Include="foto\tovars\dom\svet\5.jpg" />
+    <Resource Include="foto\tovars\dom\svet\1.jpg" />
+    <Resource Include="foto\tovars\dom\svet\2.jpg" />
+    <Resource Include="foto\tovars\dom\svet\3.jpg" />
+    <Resource Include="foto\tovars\dom\вщп\1.jpg" />
+    <Resource Include="foto\tovars\dom\вщп\2.jpg" />
+    <Resource Include="foto\tovars\dom\вщп\3.jpg" />
+    <Resource Include="foto\tovars\dom\енг\1.jpg" />
+    <Resource Include="foto\tovars\dom\енг\2.jpg" />
+    <Resource Include="foto\tovars\dom\енг\3.jpg" />
+    <Resource Include="foto\tovars\dom\енг\4.jpg" />
+    <Resource Include="foto\tovars\dom\енг\5.jpg" />
     <Resource Include="foto\tovars\dom\vel\1.jpg" />
     <Resource Include="foto\tovars\dom\vel\2.jpg" />
     <Resource Include="foto\tovars\dom\vel\3.jpg" />

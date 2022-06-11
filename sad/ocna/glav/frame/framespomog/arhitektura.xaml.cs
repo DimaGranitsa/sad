@@ -25,6 +25,8 @@ namespace sad.ocna.glav.frame.framespomog
             InitializeComponent();
             pan.ItemsSource = null;
             pan.ItemsSource = bd.conneckt.sadEntities.productnotrost.Where(z => z.tipProduct == ActualData.tipProduct).ToList();
+            pan1.ItemsSource = null;
+            pan1.ItemsSource = bd.conneckt.sadEntities.productnotrost.OrderByDescending(z => z.tipProduct == ActualData.tipProduct).ToList();
         }
 
         private void serach_tb_TextChanged(object sender, TextChangedEventArgs e)
@@ -38,6 +40,11 @@ namespace sad.ocna.glav.frame.framespomog
         }
 
         private void pan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void pan1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

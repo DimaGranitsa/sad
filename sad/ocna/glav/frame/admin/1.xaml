@@ -1,0 +1,36 @@
+﻿<Page x:Class="sad.ocna.glav.frame.admin._1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame.admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="_1">
+
+    <Grid Background="#23262B">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="f1" Grid.Row="1"></Frame>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button Background="#2E333A" BorderBrush="#2E333A"  Foreground="White" FontFamily="Times New Roman" FontSize="30" Click="Button_Click"></Button>
+               <Image Source="/foto/icon/icons8_detective_50px.png" />
+
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button Background="#2E333A" BorderBrush="#2E333A"  Foreground="White" FontFamily="Times New Roman" FontSize="30" Click="Button_Click_1"></Button>
+               <Image Source="/foto/icon/icons8_detective_64px.png" />
+
+            </Grid>
+            
+        </Grid>
+    </Grid>
+</Page>

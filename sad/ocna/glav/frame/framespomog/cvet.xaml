@@ -1,0 +1,63 @@
+﻿<Page x:Class="sad.ocna.glav.frame.framespomog.cvet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sad.ocna.glav.frame.framespomog"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1300"
+      Background="Green"
+      Title="cvet">
+    
+
+    <Grid Background="Green">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBox x:Name="serach_tb" TextChanged="serach_tb_TextChanged" Width="200" Height="29" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Button  Margin="0" Background="#2E333A" BorderBrush="#2E333A"  FontSize="18" Width="29"  Height="29" IsEnabled="False">
+                <Image Source="f:\sicharp\harley\harley\gl\icon\icons8_apple_magnifier_100px.png" />
+            </Button>
+            <Button HorizontalAlignment="Right" Margin="0" Background="#2E333A" BorderBrush="#2E333A" FontSize="18" Width="29"  Height="29" x:Name="az" Click="az_Click">
+                <Image Source="f:\sicharp\harley\harley\gl\icon\icons8_alphabetical_sorting_32px.png"/>
+            </Button>
+        </StackPanel>
+        <Grid Grid.Row="0">
+            <ListView x:Name="pan1" Background="#FF1C471C" ScrollViewer.VerticalScrollBarVisibility="Hidden"  SelectionChanged="pan1_SelectionChanged" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel >
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding tipproduname }" FontSize="60" Foreground="Black" FontFamily="Times New Roman" Width="1300" ></Label>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <ListView x:Name="pan" Background="#FF134213" ScrollViewer.VerticalScrollBarVisibility="Hidden"  SelectionChanged="pan_SelectionChanged" >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="3"  Rows="3"  Width="1300"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel >
+                            <Image Source="{Binding image}" Width="5400" Height="430" />
+                            <Label Content="{Binding tipProductname }" FontSize="30" Foreground="Black" FontFamily="Times New Roman"   ></Label>
+                            <Label Content="{Binding name }" FontSize="30" Foreground="Black" FontFamily="Times New Roman" ></Label>
+                            <Label Content="{Binding poliv }" FontSize="30" Foreground="Black" FontFamily="Times New Roman"  ></Label>
+                            <Label Content="{Binding vozrast }" FontSize="30" Foreground="Black" FontFamily="Times New Roman"  ></Label>
+                            <Label Content="{Binding cena}" FontSize="30" Foreground="Black" FontFamily="Times New Roman"  ></Label>
+                             </StackPanel>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>
