@@ -129,6 +129,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ocna\glav\frame\framespomog\kar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ocna\glav\frame\glavnay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +172,9 @@
     </Compile>
     <Compile Include="ocna\glav\frame\framespomog\cvet.xaml.cs">
       <DependentUpon>cvet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ocna\glav\frame\framespomog\kar.xaml.cs">
+      <DependentUpon>kar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ocna\glav\frame\glavnay.xaml.cs">
       <DependentUpon>glavnay.xaml</DependentUpon>

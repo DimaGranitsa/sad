@@ -28,7 +28,15 @@ namespace sad.ocna.glav.frame.admin
 
         private void vhodButton1_Click(object sender, RoutedEventArgs e)
         {
+            bd.user qwe = new bd.user()
+            {
+                Login1 = (txtUsername1.Text),
+                Pass = txtpassword1.Password,
+               
 
+            };
+            bd.conneckt.sadEntities.user.Add(qwe);
+            bd.conneckt.sadEntities.SaveChanges();
         }
 
         private void vhodButton_Click(object sender, RoutedEventArgs e)

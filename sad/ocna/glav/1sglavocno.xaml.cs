@@ -26,11 +26,11 @@ namespace sad.ocna.glav
         {
             InitializeComponent();
             f1.Navigate(new glav.frame.glavnay());
-            if (ActualData.Id_User == 0)
-            {
-                car.IsEnabled = false;
-            }
-            else { car.IsEnabled = true; }
+            //if (ActualData.Id_User == 0)
+            //{
+            //    car.IsEnabled = false;
+            //}
+            //else { car.IsEnabled = true; }
         }
 
         private void f1_Navigated(object sender, NavigationEventArgs e)
@@ -70,29 +70,25 @@ namespace sad.ocna.glav
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-            if (ActualData.Id_User == 0)
-            {
-                car.IsEnabled = false;
-            }
-            else { car.IsEnabled = true; }
+            //if (ActualData.Id_User == 0)
+            //{
+            //    car.IsEnabled = false;
+            //}
+            //else { car.IsEnabled = true; }
         }
 
         private void car_Click(object sender, RoutedEventArgs e)
         {
-            if (ActualData.Id_User == 0)
-            {
-                car.IsEnabled = false;
-            }
-            else { car.IsEnabled = true; }
+            f1.Navigate(new glav.frame.framespomog.kar());
         }
 
         private void ob_Click(object sender, RoutedEventArgs e)
         {
-            if (ActualData.Id_User == 0)
-            {
-                car.IsEnabled = false;
-            }
-            else { car.IsEnabled = true; }
+            //if (ActualData.Id_User == 0)
+            //{
+            //    car.IsEnabled = false;
+            //}
+            //else { car.IsEnabled = true; }
         }
     }
 }
